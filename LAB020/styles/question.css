@@ -1,0 +1,66 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+}
+
+.category-option, .urgency-option {
+    padding: 10px;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.category-option:hover, .urgency-option:hover {
+    border-color: #4a90e2;
+    background-color: rgba(74, 144, 226, 0.05);
+}
+
+.form-check-input:checked {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+}
+
+.form-check-input:checked ~ .form-check-label {
+    color: #4a90e2;
+    font-weight: 600;
+}
+
+.btn-submit:hover {
+    background-color: #357abd;
+}
+
+.form-control:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-check {
+    margin-bottom: 0;
+}
+
+.form-check-label {
+    width: 100%;
+    cursor: pointer;
+}
+
+.btn-submit {
+    background-color: #ff6b35;
+    border: none;
+    color: white;
+    padding: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}

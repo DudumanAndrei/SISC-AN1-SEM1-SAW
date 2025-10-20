@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fef7e5;
+    color: #5c3d1e;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(to right, #ff9500, #ffcc80);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+nav {
+    padding: 25px;
+    text-align: center; 
+}
+
+.intro {
+    padding: 25px;
+    text-align: center;
+    background-color: #fff9e6;
+    border-bottom: 2px dashed #ffcc80;
+}
+
+.intro p {
+    max-width: 800px;
+    margin: 0 auto 15px;
+    font-size: 1.1rem;
+}
+
+.table-container {
+    padding: 20px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+th {
+    background-color: #ff9500;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+tr:nth-child(even) {
+    background-color: #fff9e6;
+}
+
+tr:nth-child(odd) {
+    background-color: white;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #ffcc80;
+    vertical-align: top;
+}
+
+.category {
+    font-weight: bold;
+    color: #ff6600;
+    width: 20%;
+}
+
+.fun-facts {
+    background-color: #fff0d6;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.fun-facts h2 {
+    color: #ff6600;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.fun-facts ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.fun-facts li {
+    padding: 10px 0 10px 30px;
+    position: relative;
+}
+
+.fun-facts li:before {
+    content: "🐾";
+    position: absolute;
+    left: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffcc80;
+    color: #5c3d1e;
+    font-size: 0.9rem;
+}
+
+.btn-donate {
+    background-color: #ff9500;
+    border: none;
+    color: white;
+    padding: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-question {
+    background-color: #ff9500;
+    border: none;
+    color: white;
+    padding: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-contact {
+    background-color: #ff9500;
+    border: none;
+    color: white;
+    padding: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}

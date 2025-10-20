@@ -1,0 +1,136 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Demo JavaScript in Body</h2>
+
+    <p id="demo">A Paragraph</p>
+
+    <button type="button" onclick="myFunction()">Try it</button>
+
+    <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Paragraph changed.";
+        }
+        var x = "John Doe";
+
+        var x = 0;
+
+        let text1 = "What a very ";
+        text1 += "nice day";
+        document.getElementById("demo").innerHTML = text1;
+    </script>
+
+</body>
+
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+
+<body>
+    <h1>JavaScript if</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        let age = 13;
+        let text = "You can Not drive!";
+
+        if (age >= 18) {
+            text = "You can drive!";
+        }
+
+        document.getElementById("demo").innerHTML = text;
+    </script>
+
+</body>
+
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+
+<body>
+    <h1>JavaScript Loops</h1>
+    <h2>The for Loop</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+
+        let text = "";
+        for (let i = 0; i < cars.length; i++) {
+            text += cars[i] + "<br>";
+        }
+
+        document.getElementById("demo").innerHTML = text;
+    </script>
+
+</body>
+
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+
+<body>
+    <h1>JavaScript Functions</h1>
+
+    <p>Outside myFunction() carName is undefined.</p>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        let text = "Outside: " + typeof carName;
+        document.getElementById("demo1").innerHTML = text;
+
+        function myFunction() {
+            let carName = "Volvo";
+            let text = "Inside: " + typeof carName + " " + carName;
+            document.getElementById("demo2").innerHTML = text;
+        }
+
+        myFunction();
+    </script>
+
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planificator Călătorii</title>
+    <link rel="stylesheet" href="/Users/andreiduduman/Desktop/MASTER-SISC/SAW/LAB030/styles/LABORATOR_030.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>📅 Planificator Călătorii</h1>
+            <p>Gestionează-ți călătoriile și activitățile într-un mod organizat</p>
+        </header>
+
+        <div class="controls">
+            <button id="showAllBtn">Afișează Toate Călătorile</button>
+            <button id="showDestinationsBtn">Afișează Destinații</button>
+            <button id="showRestaurantsBtn">Afișează Restaurante</button>
+            <button id="showAccommodationsBtn">Afișează Cazări</button>
+        </div>
+
+        <div id="contentContainer" class="content-container">
+            <!-- Conținutul va fi afișat aici -->
+        </div>
+    </div>
+
+    <script src="/Users/andreiduduman/Desktop/MASTER-SISC/SAW/LAB030/source/scripts.js"></script>
+</body>
+
+</html>

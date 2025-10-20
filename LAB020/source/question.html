@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ask Me a Question</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Users/andreiduduman/Desktop/MASTER-SISC/SAW/LAB020/styles/question.css">
+</head>
+<body style="background-color:rgb(207, 230, 176);">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <!-- Header -->
+                <div class="text-center mb-4">
+                    <h1>Ask Me a Question</h1>
+                    <p class="lead">I'm here to help! Send me your questions and I'll get back to you soon.</p>
+                </div>
+
+                <!-- Question Form -->
+                <div class="card shadow">
+                    <div class="card-body p-4">
+                        <form>
+                            <!-- Personal Information -->
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number (Optional)</label>
+                                <input type="tel" class="form-control" id="phone">
+                            </div>
+                            
+                            <!-- Question Category -->
+                            <div class="mb-3">
+                                <label class="form-label">Question Category</label>
+                                <div class="row">
+                                    <div class="col-6 mb-2">
+                                        <div class="form-check category-option">
+                                            <input class="form-check-input" type="radio" name="category" id="category1" value="general">
+                                            <label class="form-check-label" for="category1">
+                                                General Question
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 mb-2">
+                                        <div class="form-check category-option">
+                                            <input class="form-check-input" type="radio" name="category" id="category2" value="technical">
+                                            <label class="form-check-label" for="category2">
+                                                Technical Help
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 mb-2">
+                                        <div class="form-check category-option">
+                                            <input class="form-check-input" type="radio" name="category" id="category3" value="support">
+                                            <label class="form-check-label" for="category3">
+                                                Support Request
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 mb-2">
+                                        <div class="form-check category-option">
+                                            <input class="form-check-input" type="radio" name="category" id="category4" value="other">
+                                            <label class="form-check-label" for="category4">
+                                                Other
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Question Text -->
+                            <div class="mb-3">
+                                <label for="question" class="form-label">Your Question</label>
+                                <textarea class="form-control" id="question" rows="5" placeholder="Please type your question here..." required></textarea>
+                            </div>
+                            
+                            <!-- Urgency -->
+                            <div class="mb-3">
+                                <label class="form-label">How urgent is your question?</label>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="form-check urgency-option">
+                                            <input class="form-check-input" type="radio" name="urgency" id="urgency1" value="low">
+                                            <label class="form-check-label" for="urgency1">
+                                                Low
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-check urgency-option">
+                                            <input class="form-check-input" type="radio" name="urgency" id="urgency2" value="medium">
+                                            <label class="form-check-label" for="urgency2">
+                                                Medium
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-check urgency-option">
+                                            <input class="form-check-input" type="radio" name="urgency" id="urgency3" value="high">
+                                            <label class="form-check-label" for="urgency3">
+                                                High
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Submit Button -->
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-submit">
+                                    Send Question
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Footer Note -->
+                <div class="text-center mt-3">
+                    <p class="text-muted small">
+                        I typically respond within 24 hours. For urgent matters, please call directly.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
