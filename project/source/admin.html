@@ -2,93 +2,138 @@
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <title>Gestiune Produse - PetShop</title>
+    <title>Administrare PetShop - Adăugare Produse</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../styles/contact.css">
+    <style>
+        .section-title {
+            border-bottom: 2px solid #ff9500;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            color: #5c3d1e;
+        }
+    </style>
 </head>
 <body style="background-color:rgb(207, 230, 176);">
     <div class="container mt-5 mb-5">
         <div class="card shadow p-4">
-            <h2 class="text-center text-dark mb-4">🐾 Formular Adăugare Stoc Produse</h2>
-            <p class="text-muted text-center">Modelarea celor 5 obiecte (Hrană, Jucării, Colivii, Acvarii, Culcușuri)</p>
-            <form>
-                <h5 class="text-primary mt-3">1. Hrană Câini</h5>
+            <h2 class="text-center text-dark mb-4">🐾 Adăugare Produs Nou în Baza de Date</h2>
+            <p class="text-muted text-center">Introduceți detaliile produsului și cele 5 caracteristici specifice.</p>
+            
+            <form id="add-product-form">
+                <h5 class="section-title">Informații Generale</h5>
                 <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <input type="text" class="form-control" placeholder="Brand (String)">
+                    <div class="form-group col-md-6">
+                        <label>Nume Produs</label>
+                        <input type="text" class="form-control" id="nume" placeholder="Ex: Hrană Câini Premium" required>
                     </div>
-                    <div class="form-group col-md-3">
-                        <input type="number" step="0.1" class="form-control" placeholder="Pret (Float)">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <input type="number" class="form-control" placeholder="Greutate kg (Int)">
-                    </div>
-                    <div class="form-group col-md-2 text-center">
-                        <label><input type="checkbox"> Bio?</label>
+                    <div class="form-group col-md-6">
+                        <label>Categorie</label>
+                        <select class="form-control" id="categorie" required>
+                            <option value="Câini">Câini</option>
+                            <option value="Pisici">Pisici</option>
+                            <option value="Iepuri">Iepuri</option>
+                            <option value="Papagali">Papagali</option>
+                            <option value="Hamsteri">Hamsteri</option>
+                        </select>
                     </div>
                 </div>
 
-                <h5 class="text-primary mt-3">2. Jucărie Pisici</h5>
                 <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <input type="text" class="form-control" placeholder="Denumire (String)">
+                    <div class="form-group col-md-6">
+                        <label>Preț (RON)</label>
+                        <input type="number" step="0.01" class="form-control" id="pret" placeholder="0.00" required>
                     </div>
-                    <div class="form-group col-md-4">
-                        <input type="text" class="form-control" placeholder="Material (String)">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <input type="number" step="0.01" class="form-control" placeholder="Pret (Float)">
+                    <div class="form-group col-md-6">
+                        <label>Cale Imagine (Folder)</label>
+                        <input type="text" class="form-control" id="imagine" placeholder="../images/nume_poza.webp" required>
                     </div>
                 </div>
 
-                <h5 class="text-primary mt-3">3. Colivie Papagali</h5>
+                <h5 class="section-title mt-4">Cele 5 Caracteristici (Modelare Obiect)</h5>
                 <div class="form-row">
                     <div class="form-group col-md-4">
-                        <input type="text" class="form-control" placeholder="Model (String)">
+                        <label>Caracteristică 1 (Ex: Greutate)</label>
+                        <input type="text" class="form-control" id="c1" placeholder="Ex: 12 kg" required>
                     </div>
                     <div class="form-group col-md-4">
-                        <input type="number" class="form-group col-md-12 form-control" placeholder="Înălțime cm (Int)">
+                        <label>Caracteristică 2 (Ex: Material)</label>
+                        <input type="text" class="form-control" id="c2" placeholder="Ex: Pui și Orez" required>
                     </div>
                     <div class="form-group col-md-4">
-                        <input type="number" step="0.01" class="form-control" placeholder="Pret (Float)">
+                        <label>Caracteristică 3 (Ex: Vârstă)</label>
+                        <input type="text" class="form-control" id="c3" placeholder="Ex: Adult" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>Caracteristică 4 (Ex: Tip)</label>
+                        <input type="text" class="form-control" id="c4" placeholder="Ex: Hrană uscată" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Caracteristică 5 (Ex: Beneficiu)</label>
+                        <input type="text" class="form-control" id="c5" placeholder="Ex: Imunitate" required>
                     </div>
                 </div>
 
-                <h5 class="text-primary mt-3">4. Acvariu Hamster</h5>
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <input type="text" class="form-control" placeholder="Brand (String)">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <input type="number" class="form-control" placeholder="Volum Litri (Int)">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <input type="number" step="0.01" class="form-control" placeholder="Pret (Float)">
-                    </div>
-                    <div class="form-group col-md-2 text-center">
-                        <label><input type="checkbox"> Accesorii?</label>
-                    </div>
-                </div>
-
-                <h5 class="text-primary mt-3">5. Culcuș Iepuri</h5>
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <input type="text" class="form-control" placeholder="Mărime S/M/L (String)">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <input type="text" class="form-control" placeholder="Material (String)">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <input type="number" step="0.01" class="form-control" placeholder="Pret (Float)">
-                    </div>
-                </div>
-
-                <button type="submit" class="btn btn-block btn-success mt-4">Salvează Produsele în Catalog</button>
+                <button type="submit" class="btn btn-block btn-success mt-4 shadow-sm">🚀 Salvează Produsul în Baza de Date</button>
             </form>
+            
+            <div id="response-message" class="mt-3 text-center" style="display:none;"></div>
         </div>
+        
         <div class="text-center mt-3">
             <a href="index.html" class="text-dark">← Înapoi la Magazin</a>
         </div>
     </div>
+
+    <script>
+        document.getElementById('add-product-form').onsubmit = function(e) {
+            e.preventDefault();
+
+            // Preluare valori din input-uri
+            const nume = document.getElementById('nume').value;
+            const categorie = document.getElementById('categorie').value;
+            const pret = document.getElementById('pret').value;
+            const imagine = document.getElementById('imagine').value;
+            const c1 = document.getElementById('c1').value;
+            const c2 = document.getElementById('c2').value;
+            const c3 = document.getElementById('c3').value;
+            const c4 = document.getElementById('c4').value;
+            const c5 = document.getElementById('c5').value;
+
+            // Construire URL pentru endpoint-ul PHP
+            // Folosim encodeURIComponent pentru a evita erorile la caractere speciale
+            const url = `products.php?create=1` +
+                        `&nume=${encodeURIComponent(nume)}` +
+                        `&categorie=${encodeURIComponent(categorie)}` +
+                        `&pret=${pret}` +
+                        `&imagine=${encodeURIComponent(imagine)}` +
+                        `&c1=${encodeURIComponent(c1)}` +
+                        `&c2=${encodeURIComponent(c2)}` +
+                        `&c3=${encodeURIComponent(c3)}` +
+                        `&c4=${encodeURIComponent(c4)}` +
+                        `&c5=${encodeURIComponent(c5)}`;
+
+            // Trimitere cerere către server
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    const msgDiv = document.getElementById('response-message');
+                    msgDiv.style.display = 'block';
+                    
+                    if(data.error === 0) {
+                        msgDiv.innerHTML = `<div class="alert alert-success">${data.text}</div>`;
+                        document.getElementById('add-product-form').reset(); // Curățăm formularul
+                    } else {
+                        msgDiv.innerHTML = `<div class="alert alert-danger">Eroare: ${data.text}</div>`;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('A apărut o eroare la conectarea cu serverul.');
+                });
+        };
+    </script>
 </body>
 </html>
