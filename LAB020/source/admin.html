@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestiune Produse - PetShop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/contact.css">
+</head>
+<body style="background-color:rgb(207, 230, 176);">
+    <div class="container mt-5 mb-5">
+        <div class="card shadow p-4">
+            <h2 class="text-center text-dark mb-4">🐾 Formular Adăugare Stoc Produse</h2>
+            <p class="text-muted text-center">Modelarea celor 5 obiecte (Hrană, Jucării, Colivii, Acvarii, Culcușuri)</p>
+            <form>
+                <h5 class="text-primary mt-3">1. Hrană Câini</h5>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <input type="text" class="form-control" placeholder="Brand (String)">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <input type="number" step="0.1" class="form-control" placeholder="Pret (Float)">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <input type="number" class="form-control" placeholder="Greutate kg (Int)">
+                    </div>
+                    <div class="form-group col-md-2 text-center">
+                        <label><input type="checkbox"> Bio?</label>
+                    </div>
+                </div>
+
+                <h5 class="text-primary mt-3">2. Jucărie Pisici</h5>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <input type="text" class="form-control" placeholder="Denumire (String)">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <input type="text" class="form-control" placeholder="Material (String)">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <input type="number" step="0.01" class="form-control" placeholder="Pret (Float)">
+                    </div>
+                </div>
+
+                <h5 class="text-primary mt-3">3. Colivie Papagali</h5>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <input type="text" class="form-control" placeholder="Model (String)">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <input type="number" class="form-group col-md-12 form-control" placeholder="Înălțime cm (Int)">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <input type="number" step="0.01" class="form-control" placeholder="Pret (Float)">
+                    </div>
+                </div>
+
+                <h5 class="text-primary mt-3">4. Acvariu Hamster</h5>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <input type="text" class="form-control" placeholder="Brand (String)">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <input type="number" class="form-control" placeholder="Volum Litri (Int)">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <input type="number" step="0.01" class="form-control" placeholder="Pret (Float)">
+                    </div>
+                    <div class="form-group col-md-2 text-center">
+                        <label><input type="checkbox"> Accesorii?</label>
+                    </div>
+                </div>
+
+                <h5 class="text-primary mt-3">5. Culcuș Iepuri</h5>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <input type="text" class="form-control" placeholder="Mărime S/M/L (String)">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <input type="text" class="form-control" placeholder="Material (String)">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <input type="number" step="0.01" class="form-control" placeholder="Pret (Float)">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-block btn-success mt-4">Salvează Produsele în Catalog</button>
+            </form>
+        </div>
+        <div class="text-center mt-3">
+            <a href="LABORATOR_020.html" class="text-dark">← Înapoi la Magazin</a>
+        </div>
+    </div>
+</body>
+</html>

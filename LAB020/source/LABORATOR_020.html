@@ -1,113 +1,141 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="ro">
 <head>
-    <title>Autobiography</title>
-    <link rel="stylesheet" href="/Users/andreiduduman/Desktop/MASTER-SISC/SAW/LAB020/styles/LABORATOR_020.css">
+    <meta charset="UTF-8">
+    <title>PetShop Thomas & Friends</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/LABORATOR_020.css">
+    <style>
+        .product-features {
+            text-align: left;
+            font-size: 0.85rem;
+            margin-top: 10px;
+            padding-left: 0;
+            list-style: none;
+        }
+        .product-features li::before {
+            content: "• ";
+            color: #ff9500;
+            font-weight: bold;
+        }
+        .text-orange {
+            color: #ff6600;
+        }
+    </style>
 </head>
-
 <body style="background-color:rgb(207, 230, 176);">
-    <nav>
-        <button class="btn btn-donate"><a
-                href="/Users/andreiduduman/Desktop/MASTER-SISC/SAW/LAB020/source/donate.html">Donate</a></button>
-        <button class="btn btn-question"><a
-                href="/Users/andreiduduman/Desktop/MASTER-SISC/SAW/LAB020/source/question.html">Ask me a
-                question</a></button>
-        <button class="btn btn-contact"><a
-                href="/Users/andreiduduman/Desktop/MASTER-SISC/SAW/LAB020/source/contact.html">Contact</a></button>
+    <nav class="text-center p-3">
+        <button class="btn btn-warning"><a href="donate.html" style="text-decoration:none; color:white;">Donații</a></button>
+        <button class="btn btn-info"><a href="question.html" style="text-decoration:none; color:white;">Întreabă-ne</a></button>
+        <button class="btn btn-success"><a href="contact.html" style="text-decoration:none; color:white;">Contact</a></button>
+        <button class="btn btn-primary"><a href="admin.html" style="text-decoration:none; color:white;">Adaugă Produse</a></button>
     </nav>
 
-    <h1 style="font-size:60px;">Hello... I'm Thomas!</h1>
-    <h2>I'm a Ginger cat.</h2>
-    <h3>I like to sleep a lot...</h3>
+    <div class="text-center py-4 text-dark">
+        <h1 style="font-size:60px;">Salut... Eu sunt Thomas!</h1>
+        <h2>Sunt o pisică portocalie și sunt mascota acestui PetShop.</h2>
+        <h3>Îmi place mult să dorm, dar îmi place și să te ajut pe tine să găsești ceea ce ai nevoie!</h3>
+        <p>Aici mă puteți vedea în toată splendoarea mea:</p>
+        <img src="../images/ginger-cat.jpg" alt="Thomas Mascota" width="450" style="border-radius: 20px; border: 8px solid white; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    </div>
 
-    <p>You can find more infos about ginger cats in the link below:</p>
-
-    <a href="https://cats.com/ginger-cats" style="color:rgb(212, 123, 14);">This is the link.</a><br><br>
-
-    <p>Here is a picture with me:</p>
-
-    <img src="/Users/andreiduduman/Desktop/MASTER-SISC/SAW/LAB020/images/ginger-cat.jpg" alt="ginger-cat" width="550"
-        height="367"><br><br>
-
-    <div class="container">
-        <header>
-            <h1>All About Ginger Cats</h1>
-            <p class="subtitle">Discover the unique characteristics of these beautiful orange felines</p>
+    <div class="container bg-white p-5 rounded shadow mb-5">
+        <header class="text-center mb-5">
+            <h1 class="text-dark">Catalog Produse PetShop</h1>
+            <p class="subtitle text-muted">Produse alese cu grijă pentru prietenii tăi (5 produse x 5 caracteristici)</p>
         </header>
 
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Category</th>
-                        <th>Details</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="category">Appearance</td>
-                        <td>
-                            <strong>Coat Color:</strong> Ranges from pale cream to deep reddish-orange<br>
-                            <strong>Patterns:</strong> Mackerel (striped), classic (swirled), spotted, or ticked<br>
-                            <strong>Distinctive Marks:</strong> Often have an "M" shape on forehead<br>
-                            <strong>Nose & Paws:</strong> Typically pink or brick-red
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="category">Personality</td>
-                        <td>
-                            <strong>Common Traits:</strong> Often described as friendly, outgoing, and affectionate<br>
-                            <strong>Temperament:</strong> Typically confident, curious, and intelligent<br>
-                            <strong>Social Behavior:</strong> Usually get along well with people and other pets<br>
-                            <strong>Activity Level:</strong> Can range from playful and energetic to calm and relaxed
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="category">Genetics</td>
-                        <td>
-                            <strong>Gene Location:</strong> The ginger color gene is on the X chromosome<br>
-                            <strong>Gender Distribution:</strong> About 80% of ginger cats are male, 20% female<br>
-                            <strong>Inheritance:</strong> Males need only one copy of the gene, females need two<br>
-                            <strong>Other Colors:</strong> Ginger cats can also have white markings
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="category">Health & Care</td>
-                        <td>
-                            <strong>General Health:</strong> No specific health issues linked to coat color<br>
-                            <strong>Sun Sensitivity:</strong> Lighter ginger cats may be prone to sunburn<br>
-                            <strong>Grooming:</strong> Regular brushing helps manage shedding<br>
-                            <strong>Diet:</strong> No special dietary requirements based on coat color
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="category">Famous Ginger Cats</td>
-                        <td>
-                            <strong>Garfield:</strong> The lasagna-loving comic strip cat<br>
-                            <strong>Orangey:</strong> The cat actor from "Breakfast at Tiffany's"<br>
-                            <strong>Morris:</strong> The finicky cat from 9Lives cat food commercials<br>
-                            <strong>Crookshanks:</strong> Hermione Granger's cat in the Harry Potter series
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="../images/dog_premium_food_1.webp" class="card-img-top p-2 rounded" alt="Hrană Câini">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-orange">Hrană Câini Premium</h5>
+                        <ul class="product-features text-muted">
+                            <li>Greutate: 12 kg</li>
+                            <li>Ingrediente principale: Pui și Orez</li>
+                            <li>Vârstă: Adult (1-7 ani)</li>
+                            <li>Tip: Hrană uscată hipoalergenică</li>
+                            <li>Beneficiu: Susține sistemul imunitar</li>
+                        </ul>
+                        <p class="fw-bold fs-5">150.00 RON</p>
+                        <button class="btn btn-outline-warning w-100">Vezi detalii</button>
+                    </div>
+                </div>
+            </div>
 
-        <section class="fun-facts">
-            <h2>Fun Facts About Ginger Cats</h2>
-            <ul>
-                <li>Ginger cats are not a specific breed - the coloration appears in many breeds including Domestic
-                    Shorthairs, Maine Coons, and Persians.</li>
-                <li>The ginger coloration is more common in certain regions, such as the United Kingdom and parts of
-                    Asia.</li>
-                <li>In ancient Egypt, ginger cats were highly prized and often depicted in artwork.</li>
-                <li>Some cultures believe ginger cats bring good luck and prosperity to their owners.</li>
-                <li>Female ginger cats are less common because they need two copies of the ginger gene (one from each
-                    parent).</li>
-            </ul>
-        </section>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="../images/cat_toy_sharp_1.webp" class="card-img-top p-2 rounded" alt="Ansamblu Pisici">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-orange">Ansamblu Pisici Relax</h5>
+                        <ul class="product-features text-muted">
+                            <li>Înălțime: 150 cm</li>
+                            <li>Material: Sisal natural și pluș</li>
+                            <li>Nivele: 3 platforme de observare</li>
+                            <li>Accesorii: Jucărie tip șoricel inclusă</li>
+                            <li>Culoare: Bej elegant</li>
+                        </ul>
+                        <p class="fw-bold fs-5">210.99 RON</p>
+                        <button class="btn btn-outline-warning w-100">Vezi detalii</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="../images/rabbit_petcage_1.jpeg" class="card-img-top p-2 rounded" alt="Cușcă Iepuri">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-orange">Cușcă Iepurași Confort</h5>
+                        <ul class="product-features text-muted">
+                            <li>Dimensiuni: 100 x 50 x 45 cm</li>
+                            <li>Material: Grilaj metalic non-toxic</li>
+                            <li>Bază: Plastic rezistent, ușor de spălat</li>
+                            <li>Acces: Ușă dublă (față și lateral)</li>
+                            <li>Extra: Suport extern pentru fân</li>
+                        </ul>
+                        <p class="fw-bold fs-5">185.00 RON</p>
+                        <button class="btn btn-outline-warning w-100">Vezi detalii</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="../images/parrot_cage_1.webp" class="card-img-top p-2 rounded" alt="Colivie">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-orange">Colivie Papagali Sky</h5>
+                        <ul class="product-features text-muted">
+                            <li>Dimensiuni: 46.5x35.5x92 cm</li>
+                            <li>Distanță gratii: 1.2 cm</li>
+                            <li>Dotări: 2 bețe sprijin + 2 hrănitori</li>
+                            <li>Curățare: Tavă colectoare detașabilă</li>
+                            <li>Siguranță: Închidere cu protecție</li>
+                        </ul>
+                        <p class="fw-bold fs-5">125.50 RON</p>
+                        <button class="btn btn-outline-warning w-100">Vezi detalii</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="../images/hamster_cage_1.webp " class="card-img-top p-2 rounded" alt="Acvariu Hamster">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-orange">Terariu Hamster Explore</h5>
+                        <ul class="product-features text-muted">
+                            <li>Volum: 60 Litri</li>
+                            <li>Material: Sticlă securizată</li>
+                            <li>Ventilație: Capac cu plasă metalică</li>
+                            <li>Include: Roată alergare silențioasă</li>
+                            <li>Dimensiuni: 60 x 30 x 35 cm</li>
+                        </ul>
+                        <p class="fw-bold fs-5">290.00 RON</p>
+                        <button class="btn btn-outline-warning w-100">Vezi detalii</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
-
 </html>
