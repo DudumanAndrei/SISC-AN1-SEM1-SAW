@@ -6,24 +6,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles/index.css">
     <style>
-        .product-features {
-            text-align: left;
-            font-size: 0.85rem;
-            margin-top: 10px;
-            padding-left: 0;
-            list-style: none;
-        }
-        .product-features li::before {
-            content: "• ";
-            color: #ff9500;
-            font-weight: bold;
-        }
-        .text-orange {
-            color: #ff6600;
-        }
+        .product-features { text-align: left; font-size: 0.85rem; list-style: none; padding-left: 0; }
+        .product-features li::before { content: "• "; color: #ff9500; font-weight: bold; }
     </style>
 </head>
-<body style="background-color:rgb(207, 230, 176);">
+<body style="background-color:rgb(207, 230, 176);" onload="incarcaProduse()">
     <nav class="text-center p-3">
         <button class="btn btn-warning"><a href="donate.html" style="text-decoration:none; color:white;">Donații</a></button>
         <button class="btn btn-info"><a href="question.html" style="text-decoration:none; color:white;">Întreabă-ne</a></button>
@@ -40,102 +27,48 @@
     </div>
 
     <div class="container bg-white p-5 rounded shadow mb-5">
-        <header class="text-center mb-5">
-            <h1 class="text-dark">Catalog Produse PetShop</h1>
-            <p class="subtitle text-muted">Produse alese cu grijă pentru prietenii tăi (5 produse x 5 caracteristici)</p>
-        </header>
-
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <img src="../images/dog_premium_food_1.webp" class="card-img-top p-2 rounded" alt="Hrană Câini">
-                    <div class="card-body text-center">
-                        <h5 class="card-title text-orange">Hrană Câini Premium</h5>
-                        <ul class="product-features text-muted">
-                            <li>Greutate: 12 kg</li>
-                            <li>Ingrediente principale: Pui și Orez</li>
-                            <li>Vârstă: Adult (1-7 ani)</li>
-                            <li>Tip: Hrană uscată hipoalergenică</li>
-                            <li>Beneficiu: Susține sistemul imunitar</li>
-                        </ul>
-                        <p class="fw-bold fs-5">150.00 RON</p>
-                        <button class="btn btn-outline-warning w-100">Vezi detalii</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <img src="../images/cat_toy_sharp_1.webp" class="card-img-top p-2 rounded" alt="Ansamblu Pisici">
-                    <div class="card-body text-center">
-                        <h5 class="card-title text-orange">Ansamblu Pisici Relax</h5>
-                        <ul class="product-features text-muted">
-                            <li>Înălțime: 150 cm</li>
-                            <li>Material: Sisal natural și pluș</li>
-                            <li>Nivele: 3 platforme de observare</li>
-                            <li>Accesorii: Jucărie tip șoricel inclusă</li>
-                            <li>Culoare: Bej elegant</li>
-                        </ul>
-                        <p class="fw-bold fs-5">210.99 RON</p>
-                        <button class="btn btn-outline-warning w-100">Vezi detalii</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <img src="../images/rabbit_petcage_1.jpeg" class="card-img-top p-2 rounded" alt="Cușcă Iepuri">
-                    <div class="card-body text-center">
-                        <h5 class="card-title text-orange">Cușcă Iepurași Confort</h5>
-                        <ul class="product-features text-muted">
-                            <li>Dimensiuni: 100 x 50 x 45 cm</li>
-                            <li>Material: Grilaj metalic non-toxic</li>
-                            <li>Bază: Plastic rezistent, ușor de spălat</li>
-                            <li>Acces: Ușă dublă (față și lateral)</li>
-                            <li>Extra: Suport extern pentru fân</li>
-                        </ul>
-                        <p class="fw-bold fs-5">185.00 RON</p>
-                        <button class="btn btn-outline-warning w-100">Vezi detalii</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <img src="../images/parrot_cage_1.webp" class="card-img-top p-2 rounded" alt="Colivie">
-                    <div class="card-body text-center">
-                        <h5 class="card-title text-orange">Colivie Papagali Sky</h5>
-                        <ul class="product-features text-muted">
-                            <li>Dimensiuni: 46.5x35.5x92 cm</li>
-                            <li>Distanță gratii: 1.2 cm</li>
-                            <li>Dotări: 2 bețe sprijin + 2 hrănitori</li>
-                            <li>Curățare: Tavă colectoare detașabilă</li>
-                            <li>Siguranță: Închidere cu protecție</li>
-                        </ul>
-                        <p class="fw-bold fs-5">125.50 RON</p>
-                        <button class="btn btn-outline-warning w-100">Vezi detalii</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <img src="../images/hamster_cage_1.webp " class="card-img-top p-2 rounded" alt="Acvariu Hamster">
-                    <div class="card-body text-center">
-                        <h5 class="card-title text-orange">Terariu Hamster Explore</h5>
-                        <ul class="product-features text-muted">
-                            <li>Volum: 60 Litri</li>
-                            <li>Material: Sticlă securizată</li>
-                            <li>Ventilație: Capac cu plasă metalică</li>
-                            <li>Include: Roată alergare silențioasă</li>
-                            <li>Dimensiuni: 60 x 30 x 35 cm</li>
-                        </ul>
-                        <p class="fw-bold fs-5">290.00 RON</p>
-                        <button class="btn btn-outline-warning w-100">Vezi detalii</button>
-                    </div>
-                </div>
-            </div>
+        <h2 class="text-center mb-5">Catalog Produse Dinamic</h2>
+        <div class="row" id="container-produse">
+            <p class="text-center">Se încarcă produsele...</p>
         </div>
     </div>
+
+    <script>
+        function incarcaProduse() {
+            fetch('products.php?read')
+                .then(response => response.json())
+                .then(data => {
+                    const container = document.getElementById('container-produse');
+                    container.innerHTML = ''; 
+
+                    data.items.forEach(produs => {
+                        const cardHTML = `
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <img src="${produs.imagine}" class="card-img-top p-2 rounded" alt="${produs.nume}">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title text-orange">${produs.nume}</h5>
+                                        <ul class="product-features text-muted">
+                                            <li>${produs.c1}</li>
+                                            <li>${produs.c2}</li>
+                                            <li>${produs.c3}</li>
+                                            <li>${produs.c4}</li>
+                                            <li>${produs.c5}</li>
+                                        </ul>
+                                        <p class="fw-bold fs-5">${produs.pret} RON</p>
+                                        <button class="btn btn-outline-warning w-100">Cumpără</button>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        container.innerHTML += cardHTML;
+                    });
+                })
+                .catch(error => {
+                    console.error('Eroare:', error);
+                    document.getElementById('container-produse').innerHTML = 'Eroare la încărcarea produselor.';
+                });
+        }
+    </script>
 </body>
 </html>
