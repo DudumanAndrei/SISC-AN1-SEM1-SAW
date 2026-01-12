@@ -1,0 +1,52 @@
+{
+  "produse": [
+    {
+      "nume": "Royal Canin Puppy",
+      "categorie": "Câini",
+      "pret": 145.99,
+      "imagine": "../images/dog_food_1.webp",
+      "c1": "15 kg",
+      "c2": "Carne pasăre",
+      "c3": "Junior",
+      "c4": "Uscată",
+      "c5": "Creștere sănătoasă",
+      "sursa" : "JSON"
+    },
+    {
+      "nume": "Purina Pro Plan Adult",
+      "categorie": "Câini",
+      "pret": 180.00,
+      "imagine": "../images/dog_food_2.webp",
+      "c1": "12 kg",
+      "c2": "Somon și Orez",
+      "c3": "Adult",
+      "c4": "Uscată",
+      "c5": "Piele sensibilă",
+      "sursa" : "JSON"
+    },
+    {
+      "nume": "Hills Science Plan Large",
+      "categorie": "Câini",
+      "pret": 210.50,
+      "imagine": "../images/dog_food_3.webp",
+      "c1": "18 kg",
+      "c2": "Miel",
+      "c3": "Adult",
+      "c4": "Uscată",
+      "c5": "Articulații",
+      "sursa" : "JSON"
+    },
+    {
+      "nume": "Brit Care Sensitive",
+      "categorie": "Câini",
+      "pret": 125.00,
+      "imagine": "../images/dog_food_4.webp",
+      "c1": "10 kg",
+      "c2": "Iepure",
+      "c3": "Toate vârstele",
+      "c4": "Fără cereale",
+      "c5": "Digestie ușoară",
+      "sursa" : "JSON"
+    }
+  ]
+}
