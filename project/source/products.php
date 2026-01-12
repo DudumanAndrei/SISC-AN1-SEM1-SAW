@@ -10,10 +10,16 @@ if ($connection->connect_errno) {
 if (isset($_GET["read"])) {
     $items = $connection->query("SELECT * FROM produse_petshop ORDER BY id ASC");
     $produse = [];
-    while ($row = $items->fetch_assoc()) {
-        $produse[] = $row;
+    if($items) {
+        while ($row = $items->fetch_assoc()) {
+            $row['sursa'] = 'DATABASE'; 
+            
+            $produse[] = $row;
+        }
+        echo json_encode(["items" => $produse]);
+    } else {
+        echo json_encode(["error" => 1, "text" => "Eroare la interogare"]);
     }
-    echo json_encode(["items" => $produse]);
 }
 
 else if (isset($_GET["create"])) {
