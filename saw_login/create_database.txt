@@ -1,0 +1,144 @@
+
+create database if not exists saw_login
+ default character set utf8 
+ default collate utf8_general_ci;
+
+use saw_login;
+
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Oct 26, 2025 at 08:24 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `saw_login`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `utilizatori`
+--
+
+drop table if exists utilizatori;
+CREATE TABLE `utilizatori` (
+  `id` int(11) NOT NULL,
+  `nume_utilizator` varchar(50) NOT NULL,
+  `parola` varchar(255) NOT NULL,
+  `creat_in` datetime DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `utilizatori`
+--
+
+INSERT INTO `utilizatori` (`id`, `nume_utilizator`, `parola`, `creat_in`) VALUES
+(10, 'ion', '$2y$10$nhsM8ecY4IO0JAeXoLdTQeyDpN9wYAEe/RY3mtWEdTTJ41SFVKFVC', '2025-10-26 21:22:41'),
+(11, 'vasile', '$2y$10$xs9OQFXFNFxeeIpd7Sc2AOFnHfXSSw0u0PIFaPE2Q6rgqFKPN8LFC', '2025-10-26 21:23:07'),
+(12, 'ene', '$2y$10$hDWT5oSAz4WfdaYfdh/Z..4sOVkYuHgxFCwfG28Gn4352Ww2aOIqG', '2025-10-26 21:23:38');
+
+INSERT INTO `utilizatori` (`id`, `nume_utilizator`, `parola`, `creat_in`) VALUES
+(100, 'andrei.arapu', '$2y$10$17/wT.ssK0nG6JFLYMY4W.vJLgIzpwgm85NnaYuEB8aSFEGCTJ/6O', '2025-11-02 19:21:06'),
+(101, 'ioana-claudia.balint', '$2y$10$xjYe6CatyxxqISLaRaUw9uw7sgxEOz5qCr26lBlqs3iJ.dLmNdREW', '2025-11-02 19:21:06'),
+(102, 'ana.bobic2', '$2y$10$oxuomXcadrLj7XOyHPK0bOPX6Vu6mF38Dp9Cab8yWULIQHwMgAohe', '2025-11-02 19:21:06'),
+(103, 'ada.borlovan', '$2y$10$0ID7WG2xwQSiUm.M.LZA3O5K6ytevJDvbrRNZYLm60G3doQTvzC8S', '2025-11-02 19:21:06'),
+(104, 'paul.brei', '$2y$10$aROd.H6t.4UltigWqDLMfeL6zLsZfIC0N830pNFCy6dDGiobN/mkC', '2025-11-02 19:21:06'),
+(105, 'dan.bulzan', '$2y$10$JlfrSTjIMngn4WERXQT.B.V7c4Q9WzBF/DfBKi5jJkiIriBVq1x3.', '2025-11-02 19:21:06'),
+(106, 'ana.calapis', '$2y$10$Vy7.gJmBc9FO8C37sYjwTOQDrlLnb3XdaENq4uFgnZzrHzcO9KI8C', '2025-11-02 19:21:06'),
+(107, 'ciprian.chirila', '$2y$10$Oi9unDGYRnZgkfmr3Lp1peh/zO3v1yZGfAUyxOa6As0JLIwoyoFDy', '2025-11-02 19:21:06'),
+(108, 'david.cocoreanu', '$2y$10$3FEYnfSnzLNnznqdmTuX5ei6qNk1WtUDMy1iZytiqAI4E5mfZrbsS', '2025-11-02 19:21:06'),
+(109, 'alexandru.costa', '$2y$10$cWNQEYWnMhOgX46TokS/IOy7W8uXKKFYvOxaFPZ55YP9C4FqNNsU2', '2025-11-02 19:21:06'),
+(110, 'emanuel.crisciu', '$2y$10$iF7Wi8IbmJ7pF2scni6AVuwG7NqERSRzmTfGw1E1GLk1WmL6o38rK', '2025-11-02 19:21:06'),
+(111, 'dragos-andrei.croitoru', '$2y$10$E0Oozwev0P9K1UUx01H3O.JOzYY7X3b5Th2U4eKIon5Br5giaoO0e', '2025-11-02 19:21:06'),
+(112, 'denisa.dobra', '$2y$10$2qITndYI4ROPd1WxNl8IvuHEc11KYmh1mqs78J0YHoxQAXMY62/PO', '2025-11-02 19:21:06'),
+(113, 'diana.draia1', '$2y$10$N6S216Pm63YfotdUhGA/seXJpJAhrTzA9qsfTahBcJGgcKYDj6fbq', '2025-11-02 19:21:06'),
+(114, 'andrei.duduman', '$2y$10$yviSYE0dCAQaLmGz70Bj5u8vRYLFixwH1IvH0YWkwf55lAL/k1DKq', '2025-11-02 19:21:06'),
+(115, 'iosif.el-kharoubi', '$2y$10$uCEczCSAcGgPwcL9bXUTAO.YFCHaKQFLJIXxSz6ctkHfGqW2yAK/e', '2025-11-02 19:21:06'),
+(116, 'nicusor.foghis', '$2y$10$MozXm1EFouYza2xlfW.u0OT52MADOOxDlFirQfNh6ez8jZ8sjofHG', '2025-11-02 19:21:06'),
+(117, 'ion.geru', '$2y$10$3/d6RZ1tPjgnPlYPVEkMhewcUCDFTOrtPi4bxtTQJTVtBb.tGE4ta', '2025-11-02 19:21:06'),
+(118, 'alexandru.gheorghita', '$2y$10$LJoGDAW08axn1O0jLPUNpOcnRcQRX4tOngiDNTqYF.9VsKqDFdlHy', '2025-11-02 19:21:06'),
+(119, 'david.gherebeanu', '$2y$10$LRJvn/MXrfROFbThTJSBdujaN1wxxMyT8Uxs3CK1nbjM733.0O/c2', '2025-11-02 19:21:06'),
+(120, 'andrei.grosu', '$2y$10$x9tIsIm1LEfEMOpEiyqJxeFV/GUL2tUEUSp8Jv4U0ugCPjTa8ntD.', '2025-11-02 19:21:06'),
+(121, 'alin.harda', '$2y$10$od8d2i8KkK/Geh1Tcl6x9OQOcdDapJVXeo.6dpSPbr8QYUGjTQzJC', '2025-11-02 19:21:06'),
+(122, 'alexandru.hatiegan', '$2y$10$45lBTDvqyjb7F0YMRMOeIONKMCtnJdtBTorCyS6O5PxSSgSGVtIKm', '2025-11-02 19:21:06'),
+(123, 'andrei.hotaran', '$2y$10$wKPl1SdnF.ecZLyj8QCLbOYUDeORwN1zdTSLH3HXf4olp32gS5lyu', '2025-11-02 19:21:06'),
+(124, 'bogdan.ichim', '$2y$10$yvKlL2NNzeUwOSJTvqhc1.NoczUnv1yLmBozw6N449WN1DlbdKi3W', '2025-11-02 19:21:06'),
+(125, 'denisa.ilisie', '$2y$10$.IyHBE4PRj9YyU5Jh.wK3eP2jtwBXnzKqUsXzwa/buQR5djbuhize', '2025-11-02 19:21:06'),
+(126, 'larisa.jurj', '$2y$10$SYXTWApOWJX48n5ySnxSGO2lpJidsgF.m/VTaSVk6pTthE3QGVkr2', '2025-11-02 19:21:06'),
+(127, 'gabriela.laurus', '$2y$10$QCGPcbUdny2HaegY11R6GOUDnFo0GHnJez0UImZoNn3U64gdL1KNm', '2025-11-02 19:21:06'),
+(128, 'anca.lazar', '$2y$10$IJZn9P8TUxi0Q0va5YFGJ.SHiOEkF5s51cVv9fqJgWOcprGnNYdja', '2025-11-02 19:21:06'),
+(129, 'dacian.lupei', '$2y$10$obNR0PWhiAha.sOIRvWgO.A5DEZmT7gXVXH1Ynoht/iLlL5goYvX2', '2025-11-02 19:21:06'),
+(130, 'antonia.magdau', '$2y$10$YIMlfsg4shqAYk6nnIpsiOrUeqkMt4H7jWpo1ZdaKn1kMSC.Z5B0a', '2025-11-02 19:21:06'),
+(131, 'miriana.maricutu', '$2y$10$F5hwYkQCwYyXSv4w3cfxce228bITWJlMnmJVsCAROa.UVi9C.YIse', '2025-11-02 19:21:06'),
+(132, 'ioan.marta', '$2y$10$jrIvw9MmSdrCxRFaGgbtv.r8ikGS9vKWKqEUdP6CD5oU7enqFcDg6', '2025-11-02 19:21:06'),
+(133, 'flavia.martinecz', '$2y$10$6x6eFVOon5AtWYtNAtvpUO9tJzwzgQp9RiMU6/p8.e.tdPcDVCgVK', '2025-11-02 19:21:06'),
+(134, 'iasmina.martinovici', '$2y$10$IP7rbCHL6C6MFwRn68Qs8eskk27Dor9WjnP4Bh1o2SgKKKykbv1GC', '2025-11-02 19:21:06'),
+(135, 'dejan.matic', '$2y$10$sL3MhW4SzOXKN3EeQnUwyu7Ksdfxzq/5CT9ftTsmXtsv.uDwapGl.', '2025-11-02 19:21:06'),
+(136, 'bogdan.mitru', '$2y$10$NVj0Bb.gB8VV0KWWXNc7he.CI9yi2nBR0MigpivphfkDW4SSZiOh6', '2025-11-02 19:21:06'),
+(137, 'vlad.necula', '$2y$10$Jsf.pjarR17GIwDjrUQDoe9TLG7ARphccMbdKd8Abr2NbxJ1WtSSG', '2025-11-02 19:21:06'),
+(138, 'bogdan-lucian.nuta', '$2y$10$9Rz43jIjWt0bCu6LJzKpyeJdvaMOTgEHx6KWAoNWMgIvI7L015MHC', '2025-11-02 19:21:06'),
+(139, 'vlad.omilescu', '$2y$10$BUlfsmzmzscSOBZpZrsLj.yA7QqU1tZMTK43ZqhV6jZb/foy4hM1K', '2025-11-02 19:21:06'),
+(140, 'crina.onea', '$2y$10$i9GGjlLU7JDkCTcU6eYGJu1HUVXc40Q1qEmpnup66Xz8ED72G85/2', '2025-11-02 19:21:06'),
+(141, 'catalin.otet.0925', '$2y$10$J13EBkzXNSslO1Oqd0JAaeu8ZsAY1pVzKIhMlK6CpN0jc2mW4Lhoy', '2025-11-02 19:21:06'),
+(142, 'corina.oxani', '$2y$10$e95avSysD5hXXflyz.hGm.LKAGNiaR4F8FxprxAslr0OYwxLNwvGq', '2025-11-02 19:21:06'),
+(143, 'tudor.pascaru', '$2y$10$/xpIpQp1XLq5kXXM.4ELG.HCIRGHWAjU06OhaHBrBmV2zcVqAxk46', '2025-11-02 19:21:06'),
+(144, 'daniel.pascu', '$2y$10$q3QAlV4UesEqLfGv1Ho3D.o3LyhxGHCcp2RX2QhriWvAlNm0WNh/i', '2025-11-02 19:21:06'),
+(145, 'monica.patrascu', '$2y$10$To/0HbsYMUlhhdq0BrUhzuxGXNjBENlATgdzBwQM1D0DI98ZeaBUu', '2025-11-02 19:21:06'),
+(146, 'paula.pistrila', '$2y$10$XymZMUNeKpyiCtScHGs4N.b.JH88GgK2w6BCAAku3pS0Ca4TPQ3QK', '2025-11-02 19:21:06'),
+(147, 'andrei.rad', '$2y$10$TGrnlCh/PeetTitMlU.VbeJUsMO7Sw/TefELKyxqgO4R0nyUlogNu', '2025-11-02 19:21:06'),
+(148, 'estera.rechesan', '$2y$10$GRC5pC9iwIZWxjkVuBNhzeDzs91T7.qD80/LX9sJMV/d1eBAMGYby', '2025-11-02 19:21:06'),
+(149, 'nicoleta.rus', '$2y$10$CvY4Duns2piTeRuc6NJjwe1fhjay42/CoeysaonzePGrqni5baoTS', '2025-11-02 19:21:06'),
+(150, 'adelin.rusu', '$2y$10$1ORAkOU6LHbcAVwAb86Qf.tMoLsRnIh4E.Kcm0tX1UagmuzaEN2DC', '2025-11-02 19:21:06'),
+(151, 'denis.sarca', '$2y$10$Ww/4i7PXBcAIDynEvDnN0..kx1dSsYqG7vIa1I1wvt.kUbgRKNQ/G', '2025-11-02 19:21:06'),
+(152, 'bogdan.simion', '$2y$10$Br.XD3fxCFJzMZIzjlnhzuQcRwB.8ZX2u/EJ4jgkhDSLKyK78Iy7u', '2025-11-02 19:21:06'),
+(153, 'iemima.spatarelu', '$2y$10$ZhkhZgMZZsu5tYDKxVZeuelqYXZa7S4tfyVlbf9y1sL58utsY42RG', '2025-11-02 19:21:06'),
+(154, 'flavius-ionel.stoian', '$2y$10$aJUI8xF5KefRmWRwElGsA.vG/69B.qhwLpPZvzvrY0GozxTFvmg0a', '2025-11-02 19:21:06'),
+(155, 'alexandra.talapan', '$2y$10$EMWrP6ZqVaaJQpVvytM/.eCS6FqxEngk4zrez8yzrWid/tg6sUVU6', '2025-11-02 19:21:06'),
+(156, 'matei.tatar', '$2y$10$pngRZMRyQ9KY5WZpdh/W7uTRhjQMcjGv/MgR4SBPQ0qmUuEJAvk4O', '2025-11-02 19:21:06'),
+(157, 'adrian.turcus', '$2y$10$PUxZarH3DAp6bwnIbz0xWulYhjrzKxHn7Uru8DSXG0Cl7.kKFmCqG', '2025-11-02 19:21:06'),
+(158, 'andrei-emanuel.tutac', '$2y$10$EvantMzNccW6Mt6jp7KszeWu4smcIfHpyTsHtRdtCt48MqFFBAR5q', '2025-11-02 19:21:06'),
+(159, 'alexandru.ursulescu', '$2y$10$QRaYfcNv3x.Vu6iPBTXvoexDPAZ0OcwwaWrg9ggmWiY5Lt5yw9KiG', '2025-11-02 19:21:06'),
+(160, 'ciprian.vasile', '$2y$10$yBsqntGSnKPU.o1vfI.YOuCvmb51QjC0z7EZnyUa4M.0v45u8d7wq', '2025-11-02 19:21:06'),
+(161, 'marinel.vasile', '$2y$10$JYSxsGdmtUs68s2Q8RSIuerF53o20MDbY/yHxwdxf5P94bclevVQq', '2025-11-02 19:21:06'),
+(162, 'viorel.velcelean', '$2y$10$stR/x8ZewcJaQ0wq4rsLGeTchKzYoG2Nfiz9m9kKH1iC9uSLzbIOC', '2025-11-02 19:21:06'),
+(163, 'andrei.verzoc', '$2y$10$HI4vqgWhFUv81cedY4C.8eWEcROlRphAatl.t4LB2/WihUHeXrw.6', '2025-11-02 19:21:06');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `utilizatori`
+--
+ALTER TABLE `utilizatori`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `nume_utilizator` (`nume_utilizator`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `utilizatori`
+--
+ALTER TABLE `utilizatori`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
