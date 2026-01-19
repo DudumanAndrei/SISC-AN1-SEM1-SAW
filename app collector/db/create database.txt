@@ -1,0 +1,16 @@
+create database if not exists collector
+ default character set utf8 
+ default collate utf8_general_ci;
+
+use collector;
+
+-- -------------------------------------------------------------------
+
+drop table if exists cookies;
+create table cookies(
+ id bigint auto_increment primary key,
+ value varchar(200) not null default '',
+ timestamp datetime DEFAULT CURRENT_TIMESTAMP
+);
+
+-- -------------------------------------------------------------------
