@@ -1,0 +1,47 @@
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+create database if not exists hostel
+ default character set utf8 
+ default collate utf8_general_ci;
+
+use hostel;
+drop table if exists reservations;
+drop table if exists employees;
+
+CREATE TABLE `reservations` (
+  `id` int(11) NOT NULL auto_increment primary key,
+  `tourist_name` varchar(50) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `subject` varchar(255) NOT NULL,
+  `message` varchar(255) NOT NULL,
+  `timestamp` datetime DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `reservations` (`id`, `tourist_name`, `email`, `subject`, `message`, `timestamp`) VALUES
+(1, 'Bill', 'bill@bill.com', 'excellent holiday', 'We had an excellent holiday. Thank you.', '2024-04-15 17:35:54'),
+(2, 'John', 'john@john.com', 'extraordinary holiday', 'We had an extraordinary holiday. Thank you.', '2024-04-15 17:35:54'),
+(3, 'Peter', 'peter@peter.com', 'fantastic voyage', 'We had a fantastic voyage. Thank you.', '2024-04-15 17:35:54'),
+(6, 'Daisy', 'daisy@daisy.com', 'fantastic voyage', 'The water in the swimming pool was good.', '2024-04-15 17:43:09'),
+(7, 'Dan', 'dan@dan.com', 'summer holiday', 'Do you have two rooms in August 1-15?', '2024-04-15 18:09:02'),
+(8, 'Daisy', 'daisy@daisy.com', 'accommodations', 'Do you have a room in Sept 1-7?', '2024-04-15 18:12:13');
+
+CREATE TABLE `employees` (
+  `id` int(11) NOT NULL auto_increment primary key,
+  `user_name` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `credit_card_number` varchar(30) NOT NULL,
+  `timestamp` datetime DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `employees` (`id`, `user_name`, `password`, `credit_card_number`, `timestamp`) VALUES
+(1, 'joe', '$2y$10$drtiZJjhCwmFOHH0SnOJLOa9.pLXWQBDdbm6EmOyXdc2fR9Hpy436', '4916-2357-8901-2345', '2024-04-15 18:29:37'),
+(2, 'michael', '$2y$10$iLGYpt/xNaVEzLDQQ91AvO3xuJjTtSss8ULtGXhDc5mayI28qhMBe', '6010-5678-9012-3456', '2024-04-15 18:31:07'),
+(3, 'george', '$2y$10$qAZpntRmZWVr9l6X9Z/V6.joSb4XhBM89XeMd3nlPKYiIoGQfFU4W', '3789-5612-3401-2345', '2024-04-15 18:36:01'),
+(4, 'jerry', '$2y$10$xcRg/3Dwmi2cbT/VyiZX9.9/W4wZO8r5GVjZ9sRs8uCQjdTCEwGKe', '5123-6789-0123-4567', '2024-04-17 07:09:31'),
+(5, 'jack', '$2y$10$OKshCFi999a692rpz3d/EuxBr8OK44slo/bJKoRpbfo66elzbZgtC', '7890-4561-2301-2345', '2024-04-17 07:10:14'),
+(6, 'arnold', '$2y$10$UbMnj1ZGfVDXk7f9Cl34h.y5Vo0hI4N5ijUBiF2.2d/ZMMkdr95H2', '2345-7890-1234-5678', '2024-04-17 07:49:18'),
+(7, 'bruce', '$2y$10$aBelPwMObVSmvYMdtYBlpOTqqTh/oKcdBBzCGu1fjLPLXAzZwzyaW', '8567-9123-4501-2345', '2024-04-17 07:49:56');
