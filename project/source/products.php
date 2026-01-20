@@ -1,9 +1,10 @@
 <?php
 header("Content-Type: application/json; charset=UTF-8");
+
 $connection = new mysqli("localhost", "root", "", "magazin_saw");
 
 if ($connection->connect_errno) {
-    echo json_encode(["error" => 1, "text" => "Eroare: " . $connection->connect_error]);
+    echo json_encode(["error" => 1, "text" => "Eroare conexiune: " . $connection->connect_error]);
     exit();
 }
 
@@ -13,13 +14,31 @@ if (isset($_GET["read"])) {
     if($items) {
         while ($row = $items->fetch_assoc()) {
             $row['sursa'] = 'DATABASE'; 
-            
             $produse[] = $row;
         }
         echo json_encode(["items" => $produse]);
     } else {
-        echo json_encode(["error" => 1, "text" => "Eroare la interogare"]);
+        echo json_encode(["error" => 2, "text" => "Eroare la interogare"]);
     }
+}
+
+else if (isset($_GET["id"])) {
+    $id_cautat = $_GET["id"];
+
+    $stmt = $connection->prepare("SELECT * FROM produse_petshop WHERE id = ?");
+    
+    $stmt->bind_param("i", $id_cautat);
+    $stmt->execute();
+    
+    $result = $stmt->get_result();
+    $produs = $result->fetch_assoc();
+
+    if ($produs) {
+        echo json_encode($produs);
+    } else {
+        echo json_encode(["error" => 3, "text" => "Produsul nu a fost găsit."]);
+    }
+    $stmt->close();
 }
 
 else if (isset($_GET["create"])) {
@@ -33,16 +52,16 @@ else if (isset($_GET["create"])) {
     $c4 = $_GET["c4"] ?? '';
     $c5 = $_GET["c5"] ?? '';
 
-    $query = "INSERT INTO produse_petshop (nume, categorie, pret, imagine, c1, c2, c3, c4, c5) 
-              VALUES ('$nume', '$categorie', $pret, '$imagine', '$c1', '$c2', '$c3', '$c4', '$c5')";
+    $stmt = $connection->prepare("INSERT INTO produse_petshop (nume, categorie, pret, imagine, c1, c2, c3, c4, c5) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
     
-    $result = $connection->query($query);
+    $stmt->bind_param("ssissssss", $nume, $categorie, $pret, $imagine, $c1, $c2, $c3, $c4, $c5);
     
-    if ($result) {
+    if ($stmt->execute()) {
         echo json_encode(["error" => 0, "text" => "Produsul $nume a fost adăugat cu succes!"]);
     } else {
         echo json_encode(["error" => 1, "text" => "Eroare SQL: " . $connection->error]);
     }
+    $stmt->close();
 }
 
 $connection->close();
